@@ -32,7 +32,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>  {
 
     let matches = App::new("Baiwen")
         .version("0.1.0")
-        .author("Angie <justangielical@gmail.com>")
+        .author("Angie")
         .about("Parses the JSON maps a certain program builds and matches a string and type to a source file")
         .arg(
             Arg::with_name("path")
@@ -80,7 +80,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>  {
 
         // -- Done with argument parsing
 
-    println!("> Trying to match [ {} ] with type [ {} ] in [ {} ]", string_to_match, type_to_match, Path::new(file_path).file_name().and_then(|name| name.to_str()).unwrap_or(file_path));
+    println!("> Trying to match [ {} ] with type [ {} ] in [ {} ]\n", string_to_match, type_to_match, Path::new(file_path).file_name().and_then(|name| name.to_str()).unwrap_or(file_path));
 
 
     // Start a timer for time checking.
@@ -88,8 +88,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>>  {
 
 
     // Read file contents and load it as JSON.
+    println!("> Reading file...");
     let file_content = fs::read_to_string(file_path)?;
     let entries: Vec<Entry> = serde_json::from_str(&file_content)?;
+    println!("> Done!\n");
 
 
 
