@@ -1,5 +1,9 @@
 <h1 align="center">︶꒷꒦︶ ๋࣭ ⭑</h1>
 
+> [!IMPORTANT]
+> This project has been archived and all development will be moved permanently to Jade Chamber.  
+> Check [this](https://github.com/jade-chamber) org for all projects related to assets.
+
 ###
 
 <h3 align="center">Baiwen</h3>
